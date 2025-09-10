@@ -19,17 +19,12 @@ import java.util.List;
 
 
 @Service
+@RequiredArgsConstructor
 public class LibraryService {
     private final BookRepository bookRepository;
     private final MemberRepository memberRepository;
     private final LoanRepository loanRepository;
 
-
-    public LibraryService(BookRepository bookRepository, MemberRepository memberRepository, LoanRepository loanRepository) {
-        this.bookRepository = bookRepository;
-        this.memberRepository = memberRepository;
-        this.loanRepository = loanRepository;
-    }
 
     public BookEntity addBook(String title, String author, String isbn) {
         BookEntity books = new BookEntity();
