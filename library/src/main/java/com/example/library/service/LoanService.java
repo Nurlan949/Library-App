@@ -13,17 +13,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class LoanService {
     private final BookRepository bookRepository;
     private final MemberRepository memberRepository;
     private final LoanRepository loanRepository;
 
-
-    public LoanService(BookRepository bookRepository, MemberRepository memberRepository, LoanRepository loanRepository) {
-        this.bookRepository = bookRepository;
-        this.memberRepository = memberRepository;
-        this.loanRepository = loanRepository;
-    }
 
     public LoanEntity createLoan(Long memberId, Long bookId) {
         LoanEntity loan = new LoanEntity();
