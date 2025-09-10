@@ -17,12 +17,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/// 1 addBook(String title, String author, String isbn): Yeni kitab əlavə edir
-/// 2 registerMember(String fullName, String email, String phoneNumber): Yeni üzv qeydiyyatdan keçir
-/// 3 borrowBook(Long memberId, Long bookId): Üzv üçün kitabı borc olaraq qeydə alır
-/// 4 returnBook(Long loanId): Borc götürülən kitabı geri qaytarır
-/// 5 listAvailableBooks(): Hazırda mövcud olan (AVAILABLE) kitabları qaytarır
-/// 6 listMemberLoans(Long memberId): Üzvün bütün borclarını qaytarır
+
 @Service
 public class LibraryService {
     private BookRepository bookRepository;
