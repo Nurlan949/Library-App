@@ -12,15 +12,16 @@ import lombok.NoArgsConstructor;
 @Table(name = "book_entity")
 @AllArgsConstructor
 @NoArgsConstructor
+@FieldDefaults(level = PRIVATE)
 public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String title;
-    private String author;
+     Long id;
+     String title;
+     String author;
     @JoinColumn(unique = true)
-    private String isbn;
+     String isbn;
     @Enumerated(EnumType.STRING)
-    private BookEnum bookStatus;
+     BookEnum bookStatus;
 
 }
