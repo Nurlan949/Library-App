@@ -14,9 +14,9 @@ import java.util.List;
 
 @Service
 public class LoanService {
-    private BookRepository bookRepository;
-    private MemberRepository memberRepository;
-    private LoanRepository loanRepository;
+    private final BookRepository bookRepository;
+    private final MemberRepository memberRepository;
+    private final LoanRepository loanRepository;
 
 
     public LoanService(BookRepository bookRepository, MemberRepository memberRepository, LoanRepository loanRepository) {
