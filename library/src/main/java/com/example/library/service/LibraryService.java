@@ -20,9 +20,9 @@ import java.util.List;
 
 @Service
 public class LibraryService {
-    private BookRepository bookRepository;
-    private MemberRepository memberRepository;
-    private LoanRepository loanRepository;
+    private final BookRepository bookRepository;
+    private final MemberRepository memberRepository;
+    private final LoanRepository loanRepository;
 
 
     public LibraryService(BookRepository bookRepository, MemberRepository memberRepository, LoanRepository loanRepository) {
