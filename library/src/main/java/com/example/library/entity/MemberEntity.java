@@ -5,35 +5,27 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import lombok.experimental.FieldDefaults;
 import java.util.Objects;
+import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
 @Table(name = "member_entity")
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@FieldDefaults(level = PRIVATE)
 public class MemberEntity  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String fullName;
-    private String email;
-    private String phoneNumber;
+    Long id;
+    String fullName;
+    String email;
+    String phoneNumber;
     @Enumerated(EnumType.STRING)
-    private MemberEnum memberStatus;
+    MemberEnum memberStatus;
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        MemberEntity that = (MemberEntity) o;
-        return Objects.equals(id, that.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), id);
-    }
+  
 }
